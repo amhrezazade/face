@@ -1,5 +1,8 @@
 
 
+print("\r\n")
+PORT = int(input("Enter Port :"))
+
 import json 
 import socket
 import http.server
@@ -7,7 +10,7 @@ import socketserver
 import webbrowser
 import face
 
-PORT = 1111
+
 
 class Handler(http.server.SimpleHTTPRequestHandler):
 
@@ -125,4 +128,5 @@ myserver =  socketserver.TCPServer(("", PORT), Handler)
 print("\r\nServer Started")
 url = "http://" + socket.gethostname() + ":" + str(PORT)
 print("URL: " + url)
+#webbrowser.open(url)
 myserver.serve_forever()
