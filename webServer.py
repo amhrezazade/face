@@ -7,7 +7,7 @@ import socketserver
 import webbrowser
 import face
 
-PORT = 1111
+PORT = 8080
 
 class Handler(http.server.SimpleHTTPRequestHandler):
 
@@ -125,5 +125,4 @@ myserver =  socketserver.TCPServer(("", PORT), Handler)
 print("\r\nServer Started")
 url = "http://" + socket.gethostname() + ":" + str(PORT)
 print("URL: " + url)
-webbrowser.open(url)
 myserver.serve_forever()
