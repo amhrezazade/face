@@ -7,7 +7,7 @@ import socketserver
 import webbrowser
 import face
 
-PORT = 8080
+PORT = 1111
 
 class Handler(http.server.SimpleHTTPRequestHandler):
 
